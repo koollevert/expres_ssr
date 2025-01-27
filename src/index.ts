@@ -12,11 +12,12 @@ app.get('/current-user', async (req, res) => {
     }
 
     const response = await axios.get<ApiResponse>(
-      'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/auth/session',
+      'http://ingress-nginx-controller.ingess-nginx.svc.cluster.local/api/auth/session',
       {
         headers: {
           // Hardcoded cookie value
           Cookie: `session=eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalkzT0Rrd1pHUXlOVE01TVRNNU1EQXhPVEkxTm1abU15SXNJbVZ0WVdsc0lqb2libWw0YjI1aGFXd3VZMjl0SWl3aWFXRjBJam94TnpNM09UQXhOVFkzZlEuSG9qeFIxM0t4VE1wY2pVWEtjb1g5OUZFVnU1MWtENV82SXNDTU90VkVNVSJ9`,
+          Host: 'tikitika.dev'
         },
       }
     );
