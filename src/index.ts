@@ -12,7 +12,7 @@ app.get('/current-user', async (req, res) => {
     }
 
     const response = await axios.get<ApiResponse>(
-      'http://209.38.60.124.kubernetes.default.svc.cluster.local/api/auth/session',
+      'http://10.245.202.141.kubernetes.default.svc.cluster.local/api/auth/session',
       {
         headers: {
           // Hardcoded cookie value
