@@ -12,7 +12,7 @@ app.get('/current-user', async (req, res) => {
     }
 
     const response = await axios.get<ApiResponse>(
-      'http://ingress-nginx-controller.ingess-nginx.svc.cluster.local/api/auth/session',
+      'http://209.38.60.124.kubernetes.default.svc.cluster.local/api/auth/session',
       {
         headers: {
           // Hardcoded cookie value
